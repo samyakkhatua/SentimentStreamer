@@ -13,16 +13,21 @@
     <div id="container">
       <div id="webcam-container">
         <h2>Webcam</h2>
-        <video id="webcam" autoplay></video>
+        <video id="webcam" autoplay playsinline></video>
+
 
         <div class="buttons">
             <button id="capture">Capture</button>
-            <button id="check" style="display: none;">Check</button>
+            <button id="detect" 
+            style="display: none;"
+            >Detect Emotion</button>
         </div>
       </div>
       <div id="content-container">
         <h2>Content</h2>
-        <div id="content"></div>
+        <div id="content">
+          <div id="emotion"></div>
+        </div>
       </div>
     </div>
     <footer>

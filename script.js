@@ -1,45 +1,51 @@
 
-// Accessing webcam
-const video = document.getElementById('webcam');
-navigator.mediaDevices.getUserMedia({ video: true })
-    .then(stream => {
-        video.srcObject = stream;
-    })
-    .catch(error => {
-        console.error('Error accessing webcam:', error);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const webcam = document.getElementById('webcam');
+    const captureButton = document.getElementById('capture');
+    const detectButton = document.getElementById('detect');
+    const emotionDisplay = document.getElementById('emotion');
+
+    function setupWebcam() {
+        navigator.mediaDevices.getUserMedia({ video: true })
+            .then(stream => {
+                webcam.srcObject = stream;
+            })
+            .catch(err => {
+                console.error("Error accessing the webcam: ", err);
+                alert('Cannot access your webcam, please check your webcam settings.');
+            });
+    }
+
+    captureButton.addEventListener('click', () => {
+        const canvas = document.createElement('canvas');
+        canvas.width = webcam.videoWidth;
+        canvas.height = webcam.videoHeight;
+        canvas.getContext('2d').drawImage(webcam, 0, 0, canvas.width, canvas.height);
+        detectButton.style.display = 'block';
+        detectButton.addEventListener('click', () => detectEmotion(canvas));
     });
 
-// Capture button click event
-document.getElementById('capture').addEventListener('click', function() {
-    console.log(this.innerHTML)
-    if(this.innerHTML=="Capture"){
-        document.getElementById("check").style.display="block";
-        var video = document.getElementById('webcam');
-        var canvas = document.createElement('canvas');
-        canvas.width = video.videoWidth;
-        canvas.height = video.videoHeight;
-        canvas.getContext('2d').drawImage(video, 0, 0, canvas.width, canvas.height);
-        var imgData = canvas.toDataURL('image/png');
-        
-        // Create image element
-        var img = new Image();
-        img.src = imgData;
-        img.style.width = '100%'; // Ensure image fits container width
-        img.style.height = '100%'; // Ensure image fits container height
-        
-        // Remove video element
-        video.remove();
-        
-        // Append image to webcam container
-        var webcamContainer = document.getElementById('webcam-container');
-        webcamContainer.appendChild(img);
-        
-        // Change capture button text to "Capture Again"
-        this.innerHTML = "Capture Again";
+    function detectEmotion(canvas) {
+        canvas.toBlob(function(blob) {
+            const formData = new FormData();
+            formData.append('file', blob, 'emotion.jpg');
+
+            fetch('http://localhost:8000/detect-emotion/', {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                emotionDisplay.textContent = "Detected Emotion: " + data.detected_emotion;
+                // backend 2
+            })
+            .catch(err => {
+                console.error("Error sending image to the server: ", err);
+                emotionDisplay.textContent = "Failed to detect emotion";
+            });
+        }, 'image/jpeg');
     }
-    else{
-        window.location.href="/"
-        
-    }
-    
-  });
+
+    setupWebcam();
+});
