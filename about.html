@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Emotion Based Content Delivery System</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #0e292b;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        .about-section {
+            padding: 10px;
+            text-align: center;
+            /* background-color: #1a2743; */
+            color: rgb(0, 0, 0);
+        }
+        .row, .container::after, .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .column {
+            float: left;
+            width: 21%;
+            margin-bottom: 16px;
+            padding: 0 28px;
+        }
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            margin: 10px;
+        }
+        .container {
+            padding: 0 16px;
+        }
+        .title {
+            color: grey;
+        }
+        .button {
+            border: none;
+            outline: 0;
+            display: inline-block;
+            padding: 8px;
+            color: white;
+            background-color: #000;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+        }
+        .button:hover {
+            background-color: #555;
+        }
+        @media screen and (max-width: 650px) {
+            .column {
+                width: 100%;
+                display: block;
+            }
+        }
+        footer {
+            background-color: #0e292b;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Facial Emotion-driven Content Recommendation System</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    
+    <div class="about-section">
+        <h1 style="text-align:center">Our Team</h1>
+    </div>
+
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="https://avatars.githubusercontent.com/u/93865677?v=4" alt="Samyak" style="width:100%">
+                <div class="container">
+                    <h2>Samyak Khatua</h2>
+                    <p class="title">Backend 1 Developer</p>
+                    <p>jane@example.com</p>
+                    <p><a href="https://www.linkedin.com/in/samyakkhatua/"><button class="button">Contact</button></a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="https://media.licdn.com/dms/image/D5603AQFFo7FsO2zG0A/profile-displayphoto-shrink_400_400/0/1711829229246?e=1723075200&v=beta&t=Jrpyv-gQ9P8lzWUNeITPXivLIgl4KTRWhyiJohOZLbE" alt="Mayank" style="width:100%">
+                <div class="container">
+                    <h2>Mayank Kumar</h2>
+                    <p class="title">Backend 2 Developer</p>
+                    <p>mike@example.com</p>
+                    <p><a href="https://www.linkedin.com/in/mayank07kr/"><button class="button">Contact</button></a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="column">
+            <div class="card">
+                <img src="https://media.licdn.com/dms/image/D5603AQERrtlB6AHUvA/profile-displayphoto-shrink_400_400/0/1717424344081?e=1723075200&v=beta&t=A8z-DVXVoobRt8LwnEGNlh_2LVnKyjVGi1e7baJxYzo" alt="Chandan" style="width:100%">
+                <div class="container">
+                    <h2>Chandan Kumar Patra</h2>
+                    <p class="title">Front-end Developer</p>
+                    <p>john@example.com</p>
+                    <p><a href="https://www.linkedin.com/in/chandanpatra/"><button class="button">Contact</button></a></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="column">
+            <div class="card">
+                <img src="https://media.licdn.com/dms/image/D4D03AQHmnvoIQe7hvQ/profile-displayphoto-shrink_400_400/0/1717426035385?e=1723075200&v=beta&t=quPu5VtnaReQEMcguNduyGLLdr80wYeYC4k_lj3kcVo" alt="Siddhant" style="width:100%">
+                <div class="container">
+                    <h2>Siddhant Sinha</h2>
+                    <p class="title">Backend 2 Developer</p>
+                    <p>mike@example.com</p>
+                    <p><a href="https://www.linkedin.com/in/siddhant-sinha-51811124a/"><button class="button">Contact</button></a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <!-- <p>Siksha 'O' Anusandhan University</p> -->
+    </footer>
+</body>
+</html>

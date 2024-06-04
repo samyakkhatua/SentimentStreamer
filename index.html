@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Based Content Delivery System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Facial Emotion-driven Content Recommendation System</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    <div id="container">
+        <div id="webcam-container">
+            <h2>Webcam</h2>
+            <video id="webcam" autoplay playsinline></video>
+            <div class="buttons">
+                <button id="capture">Capture</button>
+                <button id="detect" style="display: none;">Detect Emotion</button>
+            </div>
+        </div>
+        <div id="content-container">
+            <h2>Content</h2>
+            <div id="content">
+                <div id="emotion"></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <!-- <p>Siksha 'O' Anusandhan University</p> -->
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
