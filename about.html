@@ -6,10 +6,20 @@
     <title>About - Emotion Based Content Delivery System</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        body {
+         /* body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f0f0f0;  
+            } */
+            body {
+            font-family: Arial, sans-serif;
+            margin: auto;
+            padding: 0;
+            background-image: url('https://img.freepik.com/free-photo/3d-background-with-white-cubes_23-2150472987.jpg?w=900&t=st=1717692287~exp=1717692887~hmac=785b1bc86141f4a0c97989b7159ff4f1bfdcdb597b7e1468e20ed04deb3b7176');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
         header {
             background-color: #0e292b;
@@ -28,7 +38,6 @@
         .about-section {
             padding: 10px;
             text-align: center;
-            /* background-color: #1a2743; */
             color: rgb(0, 0, 0);
         }
         .row, .container::after, .row::after {
@@ -45,6 +54,13 @@
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             margin: 10px;
+            background-color: #fff; /* White background for cards */
+            border-radius: 10px; /* Rounded corners for cards */
+            overflow: hidden; /* Hide overflow for rounded corners */
+            transition: transform 0.3s; /* Smooth transition for hover effect */
+        }
+        .card:hover {
+            transform: scale(1.05); /* Scale up slightly on hover */
         }
         .container {
             padding: 0 16px;
@@ -56,12 +72,17 @@
             border: none;
             outline: 0;
             display: inline-block;
-            padding: 8px;
+            /* align-items: center;
+            padding-left: 50%;
+            padding-right: 50%; */
+            padding: 7px;
             color: white;
             background-color: #000;
             text-align: center;
             cursor: pointer;
-            width: 100%;
+            width: 95%;
+            text-decoration: none;
+            border-radius: 5px; /* Rounded corners for buttons */
         }
         .button:hover {
             background-color: #555;
@@ -80,6 +101,38 @@
             position: fixed;
             width: 100%;
             bottom: 0;
+        }
+        .feedback-form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            background-color: #fff; /* White background for feedback form */
+        }
+        .feedback-form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .feedback-form input, .feedback-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .feedback-form button {
+            background-color: #0e292b;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .feedback-form button:hover {
+            background-color: #01494f;
         }
     </style>
 </head>
@@ -103,8 +156,8 @@
                 <div class="container">
                     <h2>Samyak Khatua</h2>
                     <p class="title">Backend 1 Developer</p>
-                    <p>jane@example.com</p>
-                    <p><a href="https://www.linkedin.com/in/samyakkhatua/"><button class="button">Contact</button></a></p>
+                    <p>samyakkhatua4@gmail.com </p>
+                    <p><a href="https://www.linkedin.com/in/samyakkhatua/" target="_blank" class="button">Contact</a></p>
                 </div>
             </div>
         </div>
@@ -115,8 +168,8 @@
                 <div class="container">
                     <h2>Mayank Kumar</h2>
                     <p class="title">Backend 2 Developer</p>
-                    <p>mike@example.com</p>
-                    <p><a href="https://www.linkedin.com/in/mayank07kr/"><button class="button">Contact</button></a></p>
+                    <p>mk1309kr@gmail.com</p>
+                    <p><a href="https://www.linkedin.com/in/mayank07kr/" target="_blank" class="button">Contact</a></p>
                 </div>
             </div>
         </div>
@@ -127,8 +180,8 @@
                 <div class="container">
                     <h2>Chandan Kumar Patra</h2>
                     <p class="title">Front-end Developer</p>
-                    <p>john@example.com</p>
-                    <p><a href="https://www.linkedin.com/in/chandanpatra/"><button class="button">Contact</button></a></p>
+                    <p>patra1111cp@gmail.com</p>
+                    <p><a href="https://www.linkedin.com/in/chandanpatra/" target="_blank" class="button">Contact</a></p>
                 </div>
             </div>
         </div>
@@ -139,15 +192,31 @@
                 <div class="container">
                     <h2>Siddhant Sinha</h2>
                     <p class="title">Backend 2 Developer</p>
-                    <p>mike@example.com</p>
-                    <p><a href="https://www.linkedin.com/in/siddhant-sinha-51811124a/"><button class="button">Contact</button></a></p>
+                    <p>sidhuforgame69@gmail.com</p>
+                    <p><a href="https://www.linkedin.com/in/siddhant-sinha-51811124a/" target="_blank" class="button">Contact</a></p>
                 </div>
             </div>
         </div>
     </div>
 
+    <div class="feedback-form">
+        <h2>Feedback Form</h2>
+        <form action="submit_feedback.php" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="feedback">Feedback:</label>
+            <textarea id="feedback" name="feedback" rows="4" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
     <footer>
-        <!-- <p>Siksha 'O' Anusandhan University</p> -->
+        <p>Siksha 'O' Anusandhan University</p>
     </footer>
 </body>
 </html>
