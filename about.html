@@ -7,12 +7,6 @@
     <title>About - Emotion Based Content Delivery System</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        /* body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;  
-            } */
         body {
             font-family: Arial, sans-serif;
             margin: auto;
@@ -46,37 +40,32 @@
             color: rgb(0, 0, 0);
         }
 
-        .row,
-        .container::after,
-        .row::after {
-            content: "";
-            clear: both;
-            display: table;
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0 -15px;
         }
 
         .column {
-            float: left;
-            width: 21%;
-            margin-bottom: 16px;
-            padding: 0 28px;
+            flex: 1 1 21%;
+            max-width: 21%;
+            margin: 15px;
+            padding: 0 15px;
+            box-sizing: border-box;
         }
 
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             margin: 10px;
             background-color: #fff;
-            /* White background for cards */
             border-radius: 10px;
-            /* Rounded corners for cards */
             overflow: hidden;
-            /* Hide overflow for rounded corners */
             transition: transform 0.3s;
-            /* Smooth transition for hover effect */
         }
 
         .card:hover {
             transform: scale(1.05);
-            /* Scale up slightly on hover */
         }
 
         .container {
@@ -91,9 +80,6 @@
             border: none;
             outline: 0;
             display: inline-block;
-            /* align-items: center;
-            padding-left: 50%;
-            padding-right: 50%; */
             padding: 7px;
             color: white;
             background-color: #000;
@@ -102,17 +88,23 @@
             width: 95%;
             text-decoration: none;
             border-radius: 5px;
-            /* Rounded corners for buttons */
         }
 
         .button:hover {
             background-color: #555;
         }
 
-        @media screen and (max-width: 650px) {
+        @media screen and (max-width: 1024px) {
             .column {
-                width: 100%;
-                display: block;
+                flex: 1 1 45%;
+                max-width: 45%;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .column {
+                flex: 1 1 100%;
+                max-width: 100%;
             }
         }
 
@@ -121,9 +113,6 @@
             color: white;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
         }
 
         .feedback-form {
@@ -134,7 +123,6 @@
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             background-color: #fff;
-            /* White background for feedback form */
         }
 
         .feedback-form h2 {
@@ -239,7 +227,7 @@
                 <img src="https://media.licdn.com/dms/image/D5603AQERrtlB6AHUvA/profile-displayphoto-shrink_400_400/0/1717424344081?e=1723075200&v=beta&t=A8z-DVXVoobRt8LwnEGNlh_2LVnKyjVGi1e7baJxYzo"
                     alt="Chandan" style="width:100%">
                 <div class="container">
-                    <h2>Chandan Kumar Patra</h2>
+                    <h2>Chandan Patra</h2>
                     <p class="title">Front-end Developer</p>
                     <p>patra1111cp@gmail.com</p>
                     <p><a href="https://www.linkedin.com/in/chandanpatra/" target="_blank" class="button">Contact</a>
@@ -262,6 +250,7 @@
             </div>
         </div>
     </div>
+
     <div class="feedback-form">
         <h2>Feedback Form</h2>
         <p>Please fill out the following form and we will get back to you shortly</p>
@@ -296,27 +285,22 @@
             <button type="submit" onclick="Send()">Submit</button>
         </form>
     </div>
+
     <footer>
         <p>Siksha 'O' Anusandhan University </p>
     </footer>
-</body>
 
-<script>
-    function Send() {
-        var m = document.getElementById("feedback").value;
-        if (m == '') {
-            alert('Message Cannot be empty , Please describe us about your concern.');
+    <script>
+        function Send() {
+            var m = document.getElementById("feedback").value;
+            if (m == '') {
+                alert('Message Cannot be empty , Please describe us about your concern.');
+            }
+            else {
+                alert("Thanks for Reaching to us , We have Recieved Your message concern .We are Glad to listen from You and We will work upon your suggestions(if any). Keep Smiling.");
+            }
         }
-        else {
-            alert("Thanks for Reaching to us , We have Recieved Your message concern .We are Glad to listen from You and We will work upon your suggestions(if any). Keep Smiling.");
-        }
-    }
-</script>
-
-</html>
-<footer>
-    <p>Siksha 'O' Anusandhan University</p>
-</footer>
+    </script>
 </body>
 
 </html>
