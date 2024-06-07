@@ -44,6 +44,7 @@ nav a:hover {
 
 #container {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     gap: 20px;
     padding: 20px;
@@ -62,12 +63,13 @@ nav a:hover {
 }
 
 #webcam-container {
-    width: 450px;
-    margin: 0 2%;
+    width: 100%;
+    max-width: 450px;
 }
 
 #content-container {
-    width: 850px; /* Adjust width to fill remaining space */
+    width: 100%;
+    max-width: 850px;
     overflow-y: scroll; /* Always show vertical scrollbar */
 }
 
@@ -77,15 +79,15 @@ nav a:hover {
 }
 
 #content-container::-webkit-scrollbar-track {
-    background: #6e6a6a; 
+    background: #6e6a6a;
 }
 
 #content-container::-webkit-scrollbar-thumb {
-    background: #000000; 
+    background: #000000;
 }
 
 #content-container::-webkit-scrollbar-thumb:hover {
-    background: #000000; 
+    background: #000000;
 }
 
 h2 {
@@ -105,7 +107,7 @@ h2 {
 #content {
     width: 100%;
     height: 100%;
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 #emotion {
@@ -143,7 +145,7 @@ button:hover {
 footer {
     background-color: #1e1c2c;
     color: #fff;
-    padding: 20px 20px; 
+    padding: 20px 20px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     position: fixed;
@@ -154,4 +156,32 @@ footer {
 footer p {
     margin: 0;
     font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+    #container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #webcam-container, #content-container {
+        width: 90%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 18px;
+    }
+
+    nav a {
+        font-size: 15px;
+        padding: 12px 14px;
+    }
+
+    button {
+        padding: 4px 8px;
+        font-size: 14px;
+    }
 }
