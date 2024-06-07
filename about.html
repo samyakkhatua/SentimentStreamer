@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About - Emotion Based Content Delivery System</title>
     <link rel="stylesheet" href="style.css">
     <style>
-         /* body {
+        /* body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f0f0f0;  
             } */
-            body {
+        body {
             font-family: Arial, sans-serif;
             margin: auto;
             padding: 0;
@@ -21,53 +22,71 @@
             background-position: center;
             background-repeat: no-repeat;
         }
+
         header {
             background-color: #0e292b;
             color: white;
             padding: 10px 0;
             text-align: center;
         }
+
         header nav a {
             color: white;
             margin: 0 15px;
             text-decoration: none;
         }
+
         header nav a:hover {
             text-decoration: underline;
         }
+
         .about-section {
             padding: 10px;
             text-align: center;
             color: rgb(0, 0, 0);
         }
-        .row, .container::after, .row::after {
+
+        .row,
+        .container::after,
+        .row::after {
             content: "";
             clear: both;
             display: table;
         }
+
         .column {
             float: left;
             width: 21%;
             margin-bottom: 16px;
             padding: 0 28px;
         }
+
         .card {
             box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
             margin: 10px;
-            background-color: #fff; /* White background for cards */
-            border-radius: 10px; /* Rounded corners for cards */
-            overflow: hidden; /* Hide overflow for rounded corners */
-            transition: transform 0.3s; /* Smooth transition for hover effect */
+            background-color: #fff;
+            /* White background for cards */
+            border-radius: 10px;
+            /* Rounded corners for cards */
+            overflow: hidden;
+            /* Hide overflow for rounded corners */
+            transition: transform 0.3s;
+            /* Smooth transition for hover effect */
         }
+
         .card:hover {
-            transform: scale(1.05); /* Scale up slightly on hover */
+            transform: scale(1.05);
+            /* Scale up slightly on hover */
         }
+
         .container {
             padding: 0 16px;
         }
+
         .title {
             color: grey;
         }
+
         .button {
             border: none;
             outline: 0;
@@ -82,17 +101,21 @@
             cursor: pointer;
             width: 95%;
             text-decoration: none;
-            border-radius: 5px; /* Rounded corners for buttons */
+            border-radius: 5px;
+            /* Rounded corners for buttons */
         }
+
         .button:hover {
             background-color: #555;
         }
+
         @media screen and (max-width: 650px) {
             .column {
                 width: 100%;
                 display: block;
             }
         }
+
         footer {
             background-color: #0e292b;
             color: white;
@@ -102,26 +125,32 @@
             width: 100%;
             bottom: 0;
         }
+
         .feedback-form {
             max-width: 600px;
             margin: 20px auto;
-            padding: 20px;
+            padding: 40px;
             border: 1px solid #ccc;
             border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            background-color: #fff; /* White background for feedback form */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+            /* White background for feedback form */
         }
+
         .feedback-form h2 {
             text-align: center;
             margin-bottom: 20px;
         }
-        .feedback-form input, .feedback-form textarea {
+
+        .feedback-form input,
+        .feedback-form textarea {
             width: 100%;
             padding: 10px;
             margin: 10px 0;
             border: 1px solid #ccc;
             border-radius: 5px;
         }
+
         .feedback-form button {
             background-color: #0e292b;
             color: white;
@@ -131,11 +160,39 @@
             cursor: pointer;
             width: 100%;
         }
+
         .feedback-form button:hover {
             background-color: #01494f;
         }
+
+        .star-rating {
+            direction: rtl;
+            display: inline-block;
+            font-size: 0;
+        }
+
+        .star-rating input {
+            display: none;
+        }
+
+        .star-rating label {
+            font-size: 2rem;
+            color: lightgray;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .star-rating input:checked~label {
+            color: gold;
+        }
+
+        .star-rating label:hover,
+        .star-rating label:hover~label {
+            color: gold;
+        }
     </style>
 </head>
+
 <body>
     <header>
         <h1>Facial Emotion-driven Content Recommendation System</h1>
@@ -144,7 +201,7 @@
             <a href="about.html">About</a>
         </nav>
     </header>
-    
+
     <div class="about-section">
         <h1 style="text-align:center">Our Team</h1>
     </div>
@@ -152,19 +209,22 @@
     <div class="row">
         <div class="column">
             <div class="card">
-                <img src="https://res.cloudinary.com/dnmvpsveh/image/upload/v1717468784/Samyak/profile-pic_6_pft8za.png" alt="Samyak" style="width:100%">
+                <img src="https://res.cloudinary.com/dnmvpsveh/image/upload/v1717468784/Samyak/profile-pic_6_pft8za.png"
+                    alt="Samyak" style="width:100%">
                 <div class="container">
                     <h2>Samyak Khatua</h2>
                     <p class="title">Backend 1 Developer</p>
                     <p>samyakkhatua4@gmail.com </p>
-                    <p><a href="https://www.linkedin.com/in/samyakkhatua/" target="_blank" class="button">Contact</a></p>
+                    <p><a href="https://www.linkedin.com/in/samyakkhatua/" target="_blank" class="button">Contact</a>
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="column">
             <div class="card">
-                <img src="https://media.licdn.com/dms/image/D5603AQFFo7FsO2zG0A/profile-displayphoto-shrink_400_400/0/1711829229246?e=1723075200&v=beta&t=Jrpyv-gQ9P8lzWUNeITPXivLIgl4KTRWhyiJohOZLbE" alt="Mayank" style="width:100%">
+                <img src="https://media.licdn.com/dms/image/D5603AQFFo7FsO2zG0A/profile-displayphoto-shrink_400_400/0/1711829229246?e=1723075200&v=beta&t=Jrpyv-gQ9P8lzWUNeITPXivLIgl4KTRWhyiJohOZLbE"
+                    alt="Mayank" style="width:100%">
                 <div class="container">
                     <h2>Mayank Kumar</h2>
                     <p class="title">Backend 2 Developer</p>
@@ -173,50 +233,67 @@
                 </div>
             </div>
         </div>
-        
+
         <div class="column">
             <div class="card">
-                <img src="https://media.licdn.com/dms/image/D5603AQERrtlB6AHUvA/profile-displayphoto-shrink_400_400/0/1717424344081?e=1723075200&v=beta&t=A8z-DVXVoobRt8LwnEGNlh_2LVnKyjVGi1e7baJxYzo" alt="Chandan" style="width:100%">
+                <img src="https://media.licdn.com/dms/image/D5603AQERrtlB6AHUvA/profile-displayphoto-shrink_400_400/0/1717424344081?e=1723075200&v=beta&t=A8z-DVXVoobRt8LwnEGNlh_2LVnKyjVGi1e7baJxYzo"
+                    alt="Chandan" style="width:100%">
                 <div class="container">
                     <h2>Chandan Kumar Patra</h2>
                     <p class="title">Front-end Developer</p>
                     <p>patra1111cp@gmail.com</p>
-                    <p><a href="https://www.linkedin.com/in/chandanpatra/" target="_blank" class="button">Contact</a></p>
+                    <p><a href="https://www.linkedin.com/in/chandanpatra/" target="_blank" class="button">Contact</a>
+                    </p>
                 </div>
             </div>
         </div>
 
         <div class="column">
             <div class="card">
-                <img src="https://media.licdn.com/dms/image/D4D03AQHmnvoIQe7hvQ/profile-displayphoto-shrink_400_400/0/1717426035385?e=1723075200&v=beta&t=quPu5VtnaReQEMcguNduyGLLdr80wYeYC4k_lj3kcVo" alt="Siddhant" style="width:100%">
+                <img src="https://media.licdn.com/dms/image/D4D03AQHmnvoIQe7hvQ/profile-displayphoto-shrink_400_400/0/1717426035385?e=1723075200&v=beta&t=quPu5VtnaReQEMcguNduyGLLdr80wYeYC4k_lj3kcVo"
+                    alt="Siddhant" style="width:100%">
                 <div class="container">
                     <h2>Siddhant Sinha</h2>
                     <p class="title">Backend 2 Developer</p>
-                    <p>sidhuforgame69@gmail.com</p>
-                    <p><a href="https://www.linkedin.com/in/siddhant-sinha-51811124a/" target="_blank" class="button">Contact</a></p>
+                    <p>sidhuforgame@gmail.com</p>
+                    <p><a href="https://www.linkedin.com/in/siddhant-sinha-51811124a/" target="_blank"
+                            class="button">Contact</a></p>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="feedback-form">
         <h2>Feedback Form</h2>
         <form action="submit_feedback.php" method="post">
             <label for="name">Name:</label>
             <input type="text" id="name" name="name" required>
-            
+
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            
+
             <label for="feedback">Feedback:</label>
             <textarea id="feedback" name="feedback" rows="4" required></textarea>
-            
+
+            <label for="rating">Rating:</label>
+            <div class="star-rating">
+                <input type="radio" id="star5" name="rating" value="5" required>
+                <label for="star5" title="5 stars">★</label>
+                <input type="radio" id="star4" name="rating" value="4">
+                <label for="star4" title="4 stars">★</label>
+                <input type="radio" id="star3" name="rating" value="3">
+                <label for="star3" title="3 stars">★</label>
+                <input type="radio" id="star2" name="rating" value="2">
+                <label for="star2" title="2 stars">★</label>
+                <input type="radio" id="star1" name="rating" value="1">
+                <label for="star1" title="1 star">★</label>
+            </div>
+
             <button type="submit">Submit</button>
         </form>
     </div>
-
     <footer>
         <p>Siksha 'O' Anusandhan University</p>
     </footer>
 </body>
+
 </html>
